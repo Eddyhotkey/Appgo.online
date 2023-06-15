@@ -1,0 +1,27 @@
+/******************************************************
+*** Created by S-Punkt-Online www.s-punkt-online.de ***
+******************************************************/
+$font-size: 16px;
+$grid-columns: 24;
+
+/*** vendors ***/
+@import "vendors/bootstrap/scss/bootstrap";
+@import "vendors/mburger/mburger.css";
+
+/*** base ***/
+@import "base/font-face";
+@import "base/typography";
+@import "base/colors";
+@import "base/global";
+
+/*** utils ***/
+@import "utils/functions";
+@import "utils/keyframes";
+@import "utils/mixins";
+@import "utils/variables";
+
+/*** themes ***/
+/*** layouts ***/
+/*** pages ***/
+/*** components ***/
+

@@ -1,0 +1,32 @@
+{
+    "type": "project",
+    "require": {
+        "codefog/contao-mobile_menu": "^2.7",
+        "codefog/contao-news_categories": "3.4.*",
+        "contao/calendar-bundle": "4.13.*",
+        "contao/comments-bundle": "4.13.*",
+        "contao/conflicts": "*@dev",
+        "contao/faq-bundle": "4.13.*",
+        "contao/listing-bundle": "4.13.*",
+        "contao/manager-bundle": "4.13.*",
+        "contao/news-bundle": "4.13.*",
+        "contao/newsletter-bundle": "4.13.*",
+        "ma3xl3/contao-easy-favicon": "^2.0",
+        "madeyourday/contao-rocksolid-custom-elements": "^2.4",
+        "mediamotionag/contao-backend-optim-bundle": "^2.0",
+        "omosde/contao-om-backend": "^1.7",
+        "terminal42/contao-node": "^1.5"
+    },
+    "extra": {
+        "public-dir": "web",
+        "contao-component-dir": "assets"
+    },
+    "scripts": {
+        "post-install-cmd": [
+            "@php vendor/bin/contao-setup"
+        ],
+        "post-update-cmd": [
+            "@php vendor/bin/contao-setup"
+        ]
+    }
+}
