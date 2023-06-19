@@ -1,0 +1,20 @@
+<?php if ( $this->link ): ?>
+  <div class="rsce_logo__container <?= $this->class ?>" <?= $this->cssID ?>>
+    <a
+      href="<?= $this->link ?>"
+      class="rsce_logo__link"
+      title="<?= $this->link_title ?>"
+      aria-label="<?= $this->link_title ?>"
+    >
+
+    <?php if ( $logo = $this->arrData['getImageObject'] ( $this->logo ) ): ?>
+      <img
+        src="<?= $logo->src ?>"
+        class="rsce_logo"
+        alt="<?= $logo->alt ?: $this->logo_alt ?>"
+        title="<?= $logo->alt ?: $this->logo_title ?>"
+      >
+    <?php endif; ?>
+    </a>
+  </div>
+<?php endif; ?>

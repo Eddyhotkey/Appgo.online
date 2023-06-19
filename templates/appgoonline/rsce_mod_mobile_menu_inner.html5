@@ -1,0 +1,28 @@
+<div class="rsce_mod_mobile_menu_inner <?= $this->class?>" <?= $this->cssID ?>>
+  <?php if ( $this->logo_link ): ?>
+    <a href="<?= $this->logo_link ?>"
+       class="rsce_mod_mobile_menu_inner__link"
+       title="<?= $this->logo_link_title ?>"
+       aria-label="<?= $this->logo_link_title ?>"
+    >
+      <?php if ( $logo = $this->arrData['getImageObject'] ( $this->logo ) ): ?>
+        <img
+          src="<?= $logo->src ?>"
+          class="rsce_mod_mobile_menu_inner__logo"
+          alt="<?= $logo->alt ?: $this->logo_alt ?>"
+          title="<?= $logo->alt ?: $this->logo_title ?>"
+        >
+      <?php endif; ?>
+    </a>
+  <?php endif; ?>
+  {{insert_module::3}}
+  <?php if ( $this->link ): ?>
+    <a href=""
+       class="rsce_mod_mobile_menu_inner__button"
+       title="<?= $this->link_title ?>"
+       aria-label="<?= $this->link_title ?>"
+    >
+      <?= $this->link_text ?>
+    </a>
+  <?php endif; ?>
+</div>
