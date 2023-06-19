@@ -1,0 +1,109 @@
+/*** transitions mixin ***/
+@mixin transition-mix($property: all, $duration: 0.3s, $timing: linear, $delay: 0s) {
+	transition-property: $property;
+	transition-duration: $duration;
+	transition-timing-function: $timing;
+	transition-delay: $delay;
+}
+
+/*** position absolute mixin ***/
+@mixin position-absolute ($top: null, $left: null, $right: null, $bottom: null) {
+	position: absolute;
+	top: $top;
+	left: $left;
+	right: $right;
+	bottom: $bottom;
+}
+
+/*** mobile navigation button ***/
+@mixin mobile_menu_inner_button {
+	padding: rem-calc( 20px ) rem-calc( 10px );
+	color: $berlin;
+	text-align: center;
+	text-decoration: none;
+	border-radius: rem-calc( 8px );
+	background-color: $paris;
+	&:hover {
+		color: $paris;
+	}
+}
+
+
+/*** main button ***/
+@mixin main_button {
+	display: flex;
+	color: #fff;
+	letter-spacing: 1px;
+	line-height: 1;
+	background-color: #121212;
+	@include transition-mix();
+	position: relative;
+	align-items: center;
+	padding:  rem-calc( 10px );
+	transform: translateZ(0);
+	text-decoration: none;
+	overflow: hidden;
+	border-radius: rem-calc( 12px );
+	cursor: pointer;
+
+	/* overlay styles */
+	&:before {
+		@include position-absolute($top: 0, $left: 0);
+		@include transition-mix($property: transform);
+
+		display: block;
+		width: 300%;
+		height: 300%;
+
+		content: '';
+
+		transform: scale(.5);
+		transform-origin: center center;
+
+		background-color: #7F838B;
+
+		border-radius: 50%;
+
+		z-index: -1;
+	}
+
+	/* icon styles */
+	&:after {
+		@include position-absolute($top: 0, $left: 0);
+
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		width: 100%;
+		height: 100%;
+
+		content: '\f105';
+
+		font: {
+			family: "Font Awesome 6 Free";
+			size: 25px;
+			weight: 900;
+		}
+		line-height: inherit;
+		color: transparent;
+
+		transform: scale(1.4);
+	}
+
+	&:hover {
+		color: transparent;
+
+		&:before {
+			transform: scale(2);
+			transform-origin: center center;
+		}
+
+		&:after {
+			@include transition-mix($delay: .2s);
+
+			color: #fff;
+
+			transform: scale(1);
+		}
+	}
+}
