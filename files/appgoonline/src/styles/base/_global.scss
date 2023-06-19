@@ -1,0 +1,10 @@
+body {
+	font-family: 'Montserrat', sans-serif;
+	font-size: rem-calc( 16px );
+	font-weight: 400;
+
+	#wrapper {
+		max-width: rem-calc( 1920px );
+		margin: 0 auto;
+	}
+}
