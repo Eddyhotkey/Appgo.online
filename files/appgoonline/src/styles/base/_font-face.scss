@@ -63,3 +63,15 @@
 	url('../fonts/montserrat/montserrat-v25-latin-700.ttf') format('truetype'), /* Chrome 4+, Firefox 3.5+, IE 9+, Safari 3.1+, iOS 4.2+, Android Browser 2.2+ */
 	url('../fonts/montserrat/montserrat-v25-latin-700.svg#Montserrat') format('svg'); /* Legacy iOS */
 }
+
+/* Awesome Free */
+
+@font-face {
+	font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+	font-family: 'Font Awesome 6 Free';
+	font-style: normal;
+	font-weight: 900;
+	src:
+	url('../fonts/awesome_free/fa-solid-900.woff2') format('woff2'), /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+	url('../fonts/awesome_free/fa-solid-900.ttf') format('truetype')
+}
