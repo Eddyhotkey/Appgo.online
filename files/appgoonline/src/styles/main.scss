@@ -6,13 +6,7 @@ $grid-columns: 24;
 
 /*** vendors ***/
 @import "vendors/bootstrap/scss/bootstrap";
-@import "vendors/mburger/mburger.css";
-
-/*** base ***/
-@import "base/font-face";
-@import "base/typography";
-@import "base/colors";
-@import "base/global";
+@import "vendors/humburgers/hamburgers.min.css";
 
 /*** utils ***/
 @import "utils/functions";
@@ -20,8 +14,21 @@ $grid-columns: 24;
 @import "utils/mixins";
 @import "utils/variables";
 
-/*** themes ***/
-/*** layouts ***/
-/*** pages ***/
+/*** base ***/
+@import "base/font-face";
+@import "base/typography";
+@import "base/colors";
+@import "base/global";
+
 /*** components ***/
+/*** layouts ***/
+@import "layout/header",
+				"layout/footer",
+				"layout/mod_mobile_menu",
+				"layout/rsce_header";
+/*** themes ***/
+/*** pages ***/
+
+
+
 
