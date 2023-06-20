@@ -16,7 +16,7 @@
 }
 
 /*** mobile navigation button ***/
-@mixin mobile_menu_inner_button {
+@mixin mobile__button {
 	padding: rem-calc( 20px ) rem-calc( 10px );
 	color: $berlin;
 	text-align: center;
@@ -60,7 +60,7 @@
 		transform: scale(.5);
 		transform-origin: center center;
 
-		background-color: #7F838B;
+		background-color: #EDF7F4;
 
 		border-radius: 50%;
 
@@ -92,6 +92,7 @@
 
 	&:hover {
 		color: transparent;
+		background-color: transparent;
 
 		&:before {
 			transform: scale(2);
@@ -101,9 +102,28 @@
 		&:after {
 			@include transition-mix($delay: .2s);
 
-			color: #fff;
+			color: #1C9C75;
 
 			transform: scale(1);
 		}
 	}
+}
+
+/*** spacing ***/
+@mixin container_left_right_spacing {
+	padding-left: rem-calc( 16px );
+	padding-right: rem-calc( 16px );
+}
+
+@mixin content_bottom_margin {
+	margin-bottom: rem-calc( 8px );
+	@include media-breakpoint-up( lg ) {
+		margin-bottom: rem-calc( 16px );
+	}
+}
+
+/*** radius ***/
+
+@mixin large_radius {
+	border-radius: rem-calc( 16px );
 }
