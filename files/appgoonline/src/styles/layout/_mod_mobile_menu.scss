@@ -1,7 +1,6 @@
 
 .mod_mobile_menu {
 	padding: rem-calc(10px) 0;
-	background-color: tomato;
 	@include media-breakpoint-up(lg) {
 		display: none;
 	}
@@ -65,7 +64,7 @@
 	}
 
 	&__button {
-		@include mobile_menu_inner_button;
+		@include mobile__button;
 	}
 	.mod_navigation {
 		flex: 1;
