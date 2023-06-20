@@ -21,14 +21,14 @@ return array(
   'fields' => array(
     ### group ###
     'image_group' => array(
-      'label' => array('BILD ', 'Hier können Sie ein Bild hinzufügen'),
+      'label' => array('Hintergrundbild ', 'Hier können Sie ein Bild hinzufügen'),
       'inputType' => 'group',
     ),
 
     ### image ###
     'image' => array(
       'label' => array(
-        'de' => array('Bild', 'Hier können Sie das Bild auswählen'),
+        'de' => array('Hintergrundbild', 'Hier können Sie das Bild auswählen'),
       ),
       'inputType' => 'fileTree',
       'eval' => array(
@@ -36,52 +36,6 @@ return array(
         'filesOnly' => true,
         'extensions' => 'jpg,jpeg,png,gif,svg',
         'tl_class'=>'clr',
-        'mandatory' => true,
-      ),
-    ),
-
-    ### image size checkbox ###
-    'image_size_checkbox' => array(
-      'label' => array(
-        'de' => array('Bildgröße', 'Bildgröße selbst festlegen'),
-      ),
-      'inputType' => 'checkbox',
-      'eval' => array('tl_class' => 'w50 clr'),
-    ),
-
-    ### image size ###
-    'image_size' => array(
-      'label' => array(
-        'de' => array('Bildgröße', 'Hier können Sie die Abmessungen des Bildes und den Skalierungsmodus festlegen.'),
-      ),
-      'inputType' => 'imageSize',
-      'options' => \System::getImageSizes(),
-      'eval' => array('tl_class' => 'w50 clr'),
-      'dependsOn' => [
-        'field' => 'image_size_checkbox',
-      ],
-    ),
-
-    ### image alt ###
-    'image_alt' => array(
-      'label' => array(
-        'de' => array('Alt-Attribute', 'Hier können Sie einen Alt-Attribute für das Bild eingeben'),
-      ),
-      'inputType' => 'text',
-      'eval' => array(
-        'tl_class' => 'w25 clr',
-        'mandatory' => true,
-      ),
-    ),
-
-    ### image title ###
-    'image_title' => array(
-      'label' => array(
-        'de' => array('Bildtitel', 'Hier können Sie den Titel des Bildes eingeben (title-Attribut)'),
-      ),
-      'inputType' => 'text',
-      'eval' => array(
-        'tl_class' => 'w25',
         'mandatory' => true,
       ),
     ),
