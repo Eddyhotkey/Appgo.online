@@ -1,0 +1,92 @@
+.rsce_germany {
+	position: relative;
+	@include media-breakpoint-down( lg ) {
+		min-height: rem-calc( 640px );
+	}
+	@include media-breakpoint-up( lg ) {
+		margin-top: $top_spacing;
+		min-height: rem-calc( 554px );
+	}
+
+	&__background {
+		@include large_radius;
+		background-repeat: no-repeat;
+		background-size: cover;
+		background-position: 40% center;
+		@include media-breakpoint-down( lg ) {
+			min-height: rem-calc( 640px );
+			border-top-right-radius: 0;
+			border-top-left-radius: 0;
+		}
+		@include media-breakpoint-up( lg ) {
+			min-height: rem-calc( 554px );
+		}
+	}
+
+	&__container {
+		@include container_left_right_spacing;
+		position: absolute;
+		top: 0;
+		right: 0;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: space-between;
+		width: 100%;
+		height: 100%;
+		@include media-breakpoint-down( lg ) {
+			padding: rem-calc( 88px ) 0 rem-calc( 24px );
+		}
+		@include media-breakpoint-up( lg ) {
+			justify-content: center;
+		}
+	}
+
+	&__title {
+		@include content_bottom_margin;
+		font-size: rem-calc( 32px );
+		font-weight: 700;
+		text-align: center;
+		color: $berlin;
+		@include media-breakpoint-up( md ) {
+			font-size: rem-calc( 48px );
+		}
+		@include media-breakpoint-up( lg ) {
+			font-size: rem-calc( 56px );
+		}
+		@include media-breakpoint-up( xxl ) {
+			font-size: rem-calc( 80px );
+		}
+	}
+
+	&__text {
+		text-align: center;
+		color: $berlin;
+		@include media-breakpoint-down( lg ) {
+			flex: 1;
+		}
+		@include media-breakpoint-up( lg ) {
+			margin-bottom: rem-calc( 100px );
+		}
+		p {
+			margin-bottom: rem-calc( 8px );
+			&:last-child {
+				margin-bottom: 0;
+			}
+		}
+	}
+
+	&__link {
+
+		@include media-breakpoint-down( lg ) {
+			@include mobile__button;
+			color: $paris;
+			background-color: $berlin;
+		}
+		@include media-breakpoint-up( lg ) {
+			@include main_button;
+			color: $paris;
+			background-color: $berlin;
+		}
+	}
+}
