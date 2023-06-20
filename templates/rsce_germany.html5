@@ -1,0 +1,40 @@
+<section class="rsce_germany <?= $this->class ?>" <?= $this->cssID ?>>
+  <?php if ( $this->image_size ): ?>
+    <?php if ( $image = $this->arrData['getImageObject']($this -> image, $this->image_size ) ): ?>
+      <div class="rsce_germany__image">
+        <?php $image->picture['alt'] = $this->image_alt ?>
+        <?php $image->picture['title'] = $this->image_title ?>
+        <?php $this->insert('image', (array) $image); ?>
+      </div>
+    <?php endif; ?>
+  <?php else: ?>
+    <?php if ( $image = $this->arrData['getImageObject']($this -> image, [null, null, 1] ) ): ?>
+      <div class="rsce_germany__image">
+        <?php $image->picture['alt'] = $this->image_alt ?>
+        <?php $image->picture['title'] = $this->image_title ?>
+        <?php $this->insert('image', (array) $image); ?>
+      </div>
+    <?php endif; ?>
+  <?php endif; ?>
+  <div class="rsce_germany__container">
+    <?php if( $this->headline ): ?>
+        <<?php echo $this->hl ?> itemprop="title" class="rsce_germany__title">
+          <?php echo $this->headline ?>
+        </<?php echo $this->hl ?>>
+    <?php endif; ?>
+    <?php if( $this->text ): ?>
+      <div class="rsce_germany__text">
+        <?= $this->text ?>
+      </div>
+    <?php endif; ?>
+    <?php if ( $this->link ): ?>
+      <a href="<?= $this->link ?>"
+         class="rsce_germany__link"
+         title="<?= $this->link_title ?>"
+         aria-label="<?= $this->link_aria_label ?>"
+      >
+        <?= $this->link_text ?>
+      </a>
+    <?php endif; ?>
+  </div>
+</section>
