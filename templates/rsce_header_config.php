@@ -1,9 +1,9 @@
 <?php
 
-######################################
-### Created by Rashid Bairamov #######
-### https://www.rashidbairamov.de ####
-######################################
+##########################################
+### Created by S Punkt Online GmbH #######
+######## https://www.spo.digital #########
+##########################################
 
 return array(
   'label' => array(
