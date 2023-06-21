@@ -1,0 +1,32 @@
+<section class="rsce_footer <?= $this->class ?>" <?= $this->cssID ?>>
+  <div class="container-fluid">
+    <div class="rsce_footer__container">
+      <?php if ( $this->logo_link ): ?>
+        <a href="<?= $this->logo_link ?>"
+           class="rsce_footer__link"
+           title="<?= $this->logo_link_title ?>"
+           aria-label="<?= $this->logo_link_title ?>"
+        >
+          <?php if ( $logo = $this->arrData['getImageObject'] ( $this->logo ) ): ?>
+            <img
+              src="<?= $logo->src ?>"
+              class="rsce_footer__logo"
+              alt="<?= $logo->alt ?: $this->logo_alt ?>"
+              title="<?= $logo->alt ?: $this->logo_title ?>"
+            >
+          <?php endif; ?>
+        </a>
+      <?php endif; ?>
+      {{insert_module::<?= $this->module_number ?>}}
+      <?php if ( $this->link ): ?>
+        <a href="<?= $this->link ?>"
+           class="rsce_footer__button"
+           title="<?= $this->link_title ?>"
+           aria-label="<?= $this->link_title ?>"
+        >
+          <?= $this->link_text ?>
+        </a>
+      <?php endif; ?>
+    </div>
+  </div>
+</section>
