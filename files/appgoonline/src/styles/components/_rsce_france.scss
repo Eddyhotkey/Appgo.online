@@ -1,0 +1,18 @@
+.rsce_france {
+	@include content_top_margin;
+	padding-top: rem-calc( 24px );
+	padding-bottom: rem-calc( 24px );
+	border-radius: $border_radius_large;
+	background-color: $berlin;
+	&__container {
+		@include container_left_right_spacing;
+	}
+
+	&__col {
+		display: flex;
+	}
+
+	&__icon {
+		margin-right: $spacing_12;
+	}
+}
