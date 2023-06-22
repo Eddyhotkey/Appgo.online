@@ -1,0 +1,24 @@
+<div class="rsce_france <?= $this->class ?>" <?= $this->css ?>>
+  <div class="rsce_france__container">
+    <div class="rsce_france__row row">
+      <?php foreach ( $this->list as $item ): ?>
+        <div class=" rsce_france__col col-24 col-md-12">
+          <?php if ( $icon = $this->arrData['getImageObject'] ( $item->icon ) ): ?>
+            <img
+              src="<?= $icon->src ?>"
+              class="rsce_france__icon"
+              alt="<?= $icon->alt ?: $item->icon_alt ?>"
+              title="<?= $icon->alt ?: $item->icon_title ?>"
+            >
+          <?php endif; ?>
+          <?php if ( $item->textarea ): ?>
+            <p class="rsce_france__text">
+              <?= $item->textarea ?>
+            </p>
+          <?php endif; ?>
+        </div>
+      <?php endforeach; ?>
+    </div>
+
+  </div>
+</div>
