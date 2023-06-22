@@ -113,6 +113,10 @@
 @mixin container_left_right_spacing {
 	padding-left: rem-calc( 16px );
 	padding-right: rem-calc( 16px );
+	@include media-breakpoint-up( lg ) {
+		padding-left: rem-calc( 32px );
+		padding-right: rem-calc( 32px );
+	}
 }
 
 @mixin content_bottom_margin {
@@ -122,8 +126,29 @@
 	}
 }
 
-/*** radius ***/
-
-@mixin large_radius {
-	border-radius: rem-calc( 16px );
+@mixin  content_left_margin {
+	margin-left: rem-calc( 8px );
+	@include media-breakpoint-up( lg ) {
+		margin-left: rem-calc( 16px );
+	}
 }
+
+@mixin content_right_margin {
+	margin-right: rem-calc( 8px );
+	@include media-breakpoint-up( lg ) {
+		margin-right: rem-calc( 16px );
+	}
+}
+
+@mixin content_top_margin {
+	margin-top: rem-calc( 8px );
+	@include media-breakpoint-up( lg ) {
+		margin-top: rem-calc( 16px );
+	}
+}
+
+/*** shadows ***/
+@mixin shadow_sm {
+	box-shadow: 1px 2px 12px 0 rgba(36, 36, 36, 0.00);
+}
+
