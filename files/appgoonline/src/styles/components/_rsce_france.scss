@@ -1,5 +1,6 @@
 .rsce_france {
 	@include content_top_margin;
+  @include container_bottom_margin;
 	padding-top: rem-calc( 24px );
 	padding-bottom: rem-calc( 24px );
 	border-radius: $border_radius_large;
@@ -10,6 +11,7 @@
 
 	&__col {
 		display: flex;
+		align-items: center;
 	}
 
 	&__icon {
