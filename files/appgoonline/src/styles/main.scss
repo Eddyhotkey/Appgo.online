@@ -9,10 +9,11 @@ $grid-columns: 24;
 @import "vendors/humburgers/hamburgers.min.css";
 
 /*** utils ***/
-@import "utils/functions";
-@import "utils/keyframes";
-@import "utils/mixins";
-@import "utils/variables";
+@import "utils/functions",
+				"utils/keyframes",
+				"utils/mixins",
+				"utils/variables",
+				"utils/classes";
 
 /*** base ***/
 @import "base/font-face";
