@@ -7,7 +7,7 @@
 
 return array(
   'label' => array(
-    'Merkmale-Liste: icon, text',
+    'Merkmale-Liste: Icon, Teaser-Text',
   ),
   'types' => array( 'content' ),
   'contentCategory' => 'RSCE: Main',
