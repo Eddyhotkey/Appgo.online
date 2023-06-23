@@ -147,6 +147,13 @@
 	}
 }
 
+@mixin container_bottom_margin {
+	margin-bottom: rem-calc( 64px );
+	@include media-breakpoint-up( lg ) {
+		margin-bottom: rem-calc( 120px );
+	}
+}
+
 /*** shadows ***/
 @mixin shadow_sm {
 	box-shadow: 1px 2px 12px 0 rgba(36, 36, 36, 0.00);
