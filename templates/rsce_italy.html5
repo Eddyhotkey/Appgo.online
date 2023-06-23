@@ -1,0 +1,35 @@
+<div class="rsce_italy <?= $this->class ?>" <?= $this->cssID ?>>
+  <div class="rsce_italy__container <?= ($this->position_chb) ? 'image_first': '' ?>">
+    <?php if ( $this->text ): ?>
+      <div class="rsce_italy__text">
+        <?= $this->text ?>
+      </div>
+    <?php endif; ?>
+    <?php if ( $this->image_size ): ?>
+        <?php if ( $image = $this->arrData['getImageObject']($this -> image, $this->image_size ) ): ?>
+          <div class="rsce_italy__image">
+            <?php $image->picture['alt'] = $this->image_alt ?>
+            <?php $image->picture['title'] = $this->image_title ?>
+            <?php $this->insert('image', (array) $image); ?>
+          </div>
+        <?php endif; ?>
+    <?php else: ?>
+        <?php if ( $image = $this->arrData['getImageObject']($this -> image, [null, null, 2] ) ): ?>
+          <div class="rsce_italy__image">
+            <?php $image->picture['alt'] = $this->image_alt ?>
+            <?php $image->picture['title'] = $this->image_title ?>
+            <?php $this->insert('image', (array) $image); ?>
+          </div>
+        <?php endif; ?>
+    <?php endif; ?>
+  </div>
+  <?php if ( $this->link ): ?>
+    <a href="<?= $this->link ?>"
+       class="rsce_italy__link"
+       title="<?= $this->link_title ?>"
+       aria-label="<?= $this->link_aria_label ?>"
+    >
+      <?= $this->link_text ?>
+    </a>
+  <?php endif; ?>
+</div>
