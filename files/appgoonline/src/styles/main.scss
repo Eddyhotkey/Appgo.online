@@ -21,15 +21,18 @@ $grid-columns: 24;
 @import "base/global";
 
 /*** components ***/
-@import "components/rsce_germany";
+@import "components/rsce_germany",
+				"components/rsce_france";
 
 /*** layouts ***/
 @import "layout/header",
 				"layout/footer",
 				"layout/mod_mobile_menu",
-				"layout/rsce_header";
+				"layout/rsce_header",
+				"layout/rsce_footer";
 /*** themes ***/
 /*** pages ***/
+@import "pages/homepage";
 
 
 
