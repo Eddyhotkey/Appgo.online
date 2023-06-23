@@ -1,0 +1,9 @@
+.main_title {
+	margin-bottom: $spacing_24;
+	font-size: rem-calc( 28px );
+	font-weight: 700;
+	@include media-breakpoint-up( lg ) {
+		margin-bottom: $spacing_48;
+		font-size: rem-calc( 48px );
+	}
+}
