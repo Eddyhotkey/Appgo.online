@@ -1,0 +1,66 @@
+.rsce_italy {
+	@include container_bottom_margin;
+	&__container {
+		@include container_inner_spacing;
+		@include shadow_sm;
+		display: flex;
+		flex-direction: column-reverse;
+		background-color: $berlin;
+		border-radius: $border_radius_large;
+
+		@include media-breakpoint-up( lg ) {
+			flex-direction: row;
+		}
+
+		&.image_first {
+			@include media-breakpoint-up( lg ) {
+				flex-direction: row-reverse;
+				.rsce_italy__text {
+					margin-right: 0;
+					margin-left: rem-calc( 16px );
+				}
+				.rsce_italy__image {
+					margin-right: rem-calc( 16px );
+					margin-left: 0;
+				}
+			}
+		}
+	}
+
+	&__text {
+		@include text_title;
+		@include media-breakpoint-up( lg ) {
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			width: calc( 50% - 16px );
+			margin-right: rem-calc( 16px );
+		}
+	}
+
+	&__image {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		@include media-breakpoint-down( lg ) {
+			margin-bottom: $spacing_12;
+		}
+		@include media-breakpoint-up( lg ) {
+			width: calc( 50% - 16px );
+			margin-left: rem-calc( 16px );
+		}
+	}
+
+	&__link {
+		@include media-breakpoint-down( lg ) {
+			@include mobile__button;
+			display: block;
+			margin: $spacing_24 $spacing_16 0;
+		}
+		@include media-breakpoint-up( lg ) {
+			@include main_button;
+			width: fit-content;
+			margin: $spacing_24 auto 0;
+		}
+	}
+}
