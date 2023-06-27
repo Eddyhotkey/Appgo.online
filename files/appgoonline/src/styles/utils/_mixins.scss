@@ -110,7 +110,15 @@
 }
 
 /*** spacing ***/
-@mixin container_left_right_spacing {
+
+@mixin container_inner_spacing {
+	padding: rem-calc( 16px );
+	@include media-breakpoint-up( lg ) {
+		padding: rem-calc( 32px );
+	}
+}
+
+@mixin container_inner_left_right_spacing {
 	padding-left: rem-calc( 16px );
 	padding-right: rem-calc( 16px );
 	@include media-breakpoint-up( lg ) {
@@ -151,6 +159,15 @@
 	margin-bottom: rem-calc( 64px );
 	@include media-breakpoint-up( lg ) {
 		margin-bottom: rem-calc( 120px );
+	}
+}
+
+
+/*** title ***/
+@mixin text_title {
+	h1,h2,h3,h4,h5,h6, {
+		font-size: rem-calc( 28px );
+		font-weight: 700;
 	}
 }
 
