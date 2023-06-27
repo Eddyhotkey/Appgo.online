@@ -1,9 +1,35 @@
 #header {
+	transition-duration: .3s;
+	&.scroll {
+		background-color: rgba(255, 204, 0, 0.9);
+		border-bottom-left-radius: rem-calc( 12px );
+		border-bottom-right-radius: rem-calc( 12px );
+		transition-duration: .3s;
+	}
 	@include media-breakpoint-down( lg ) {
-		position: absolute;
+		position: fixed;
 		top: 0;
 		left: 0;
-		z-index: 999999;
+		z-index: 10;
 		width: 100%;
+	}
+	@include media-breakpoint-up( lg ) {
+
+	}
+}
+
+.sticky {
+	top: 0;
+	z-index: 999999;
+	background-color: $baku;
+	border-bottom-right-radius: rem-calc( 16px );
+	border-bottom-left-radius: rem-calc( 16px );
+	transition: top 3s ease-in-out;
+	@include media-breakpoint-down( lg ) {
+		position: fixed !important;
+	}
+	@include media-breakpoint-up( lg ) {
+		position: sticky !important;
+		background-color: $wien;
 	}
 }
