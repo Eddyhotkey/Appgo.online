@@ -3,7 +3,7 @@
     <div class="rsce_germany__background" style="background-image: url('<?= $image->src ?>');">
     </div>
   <?php endif ?>
-  <div class="rsce_germany__container">
+  <div class="rsce_germany__container" itemscope itemtype="http://schema.org/Article">
     <?php if( $this->headline ): ?>
         <<?php echo $this->hl ?> itemprop="title" class="rsce_germany__title">
           <?php echo $this->headline ?>
