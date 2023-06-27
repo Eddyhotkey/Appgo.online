@@ -32,10 +32,10 @@
 /*** main button ***/
 @mixin main_button {
 	display: flex;
-	color: #fff;
+	color: $paris;
 	letter-spacing: 1px;
 	line-height: 1;
-	background-color: #121212;
+	background-color: $amsterdam;
 	@include transition-mix();
 	position: relative;
 	align-items: center;
@@ -48,7 +48,7 @@
 
 	/* overlay styles */
 	&:before {
-		@include position-absolute($top: 0, $left: 0);
+		@include position-absolute($top: 1px, $left: 0);
 		@include transition-mix($property: transform);
 
 		display: block;
@@ -60,7 +60,7 @@
 		transform: scale(.5);
 		transform-origin: center center;
 
-		background-color: #EDF7F4;
+		background-color: $paris;
 
 		border-radius: 50%;
 
@@ -102,7 +102,7 @@
 		&:after {
 			@include transition-mix($delay: .2s);
 
-			color: #1C9C75;
+			color: $amsterdam;
 
 			transform: scale(1);
 		}
