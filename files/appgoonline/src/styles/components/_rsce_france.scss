@@ -1,12 +1,13 @@
 .rsce_france {
 	@include content_top_margin;
   @include container_bottom_margin;
+	@include shadow_sm;
 	padding-top: rem-calc( 24px );
 	padding-bottom: rem-calc( 24px );
 	border-radius: $border_radius_large;
 	background-color: $berlin;
 	&__container {
-		@include container_left_right_spacing;
+		@include container_inner_left_right_spacing;
 	}
 
 	&__col {
