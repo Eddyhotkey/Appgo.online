@@ -9,7 +9,6 @@
 	}
 
 	&__background {
-
 		background-repeat: no-repeat;
 		background-size: cover;
 		background-position: 40% center;
@@ -25,7 +24,7 @@
 	}
 
 	&__container {
-		@include container_left_right_spacing;
+		@include container_inner_left_right_spacing;
 		position: absolute;
 		top: 0;
 		right: 0;
