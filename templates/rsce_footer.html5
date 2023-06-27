@@ -1,4 +1,4 @@
-<section class="rsce_footer <?= $this->class ?>" <?= $this->cssID ?>>
+<div class="rsce_footer <?= $this->class ?>" <?= $this->cssID ?>>
   <div class="container-fluid">
     <div class="rsce_footer__container">
       <?php if ( $this->logo_link ): ?>
@@ -29,4 +29,4 @@
     </div>
     {{insert_module::<?= $this->module_number ?>}}
   </div>
-</section>
+</div>
