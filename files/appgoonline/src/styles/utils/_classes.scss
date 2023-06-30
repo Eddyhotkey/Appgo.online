@@ -6,6 +6,7 @@
 		@include container_inner_left_right_spacing;
 	}
 	@include media-breakpoint-up( lg ) {
+		max-width: 70%;
 		margin-bottom: $spacing_48;
 		font-size: rem-calc( 48px );
 	}
