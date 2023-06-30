@@ -1,11 +1,16 @@
 /*** spacing ***/
+$spacing_10: rem-calc( 10px );
 $spacing_12: rem-calc( 12px );
 $spacing_16: rem-calc( 16px );
 $spacing_24: rem-calc( 24px );
+$spacing_32: rem-calc( 32px );
 $spacing_48: rem-calc( 48px );
 
 
 
 
 /*** border-radius ***/
+
+$border_radius_small: rem-calc( 12px );
 $border_radius_large: rem-calc( 16px );
+
