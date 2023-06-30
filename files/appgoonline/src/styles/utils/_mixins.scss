@@ -175,4 +175,7 @@
 @mixin shadow_sm {
 	box-shadow: 1px 2px 12px 0 rgba(36, 36, 36, 0.00);
 }
+@mixin shadow_lg {
+	box-shadow: 0 2px 160px 16px rgba(0, 0, 0, 0.07);
+}
 
