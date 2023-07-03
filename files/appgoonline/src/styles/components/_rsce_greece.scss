@@ -1,0 +1,53 @@
+.rsce_greece {
+	@include container_bottom_margin;
+	&__container {
+		@include shadow_sm;
+		display: flex;
+		flex-direction: column;
+
+		@include media-breakpoint-up( lg ) {
+			flex-direction: row;
+			justify-content: space-between;
+			align-items: center;
+		}
+
+		&.text_first {
+			@include media-breakpoint-up(lg) {
+				flex-direction: row-reverse;
+			}
+		}
+	}
+
+
+
+	&__image {
+		@include container_inner_spacing;
+		background-color: $berlin;
+		border-radius: $border_radius_large;
+		@include media-breakpoint-down( lg ) {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+		}
+		@include media-breakpoint-up( lg ) {
+			width: calc( 50% - 16px );
+		}
+	}
+	&__text {
+		h1,h2,h3,h4,h5,h6 {
+			font-size: rem-calc( 20px );
+			font-weight: 700;
+			@include media-breakpoint-up( lg ) {
+				font-size: rem-calc( 28px );
+			}
+		}
+		@include media-breakpoint-down( lg ) {
+			@include container_inner_spacing;
+		}
+		@include media-breakpoint-up( lg ) {
+			width: calc( 50% - 16px );
+			height: 100%;
+		}
+	}
+}
+
