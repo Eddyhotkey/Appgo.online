@@ -1,0 +1,26 @@
+<div class="rsce_greece <?= $this->class ?>" <?= $this->cssID ?>>
+  <div class="rsce_greece__container <?= ($this->position_chb) ? 'text_first': '' ?>">
+    <?php if ( $this->image_size ): ?>
+      <?php if ( $image = $this->arrData['getImageObject']($this -> image, $this->image_size ) ): ?>
+        <div class="rsce_greece__image">
+          <?php $image->picture['alt'] = $this->image_alt ?>
+          <?php $image->picture['title'] = $this->image_title ?>
+          <?php $this->insert('image', (array) $image); ?>
+        </div>
+      <?php endif; ?>
+    <?php else: ?>
+      <?php if ( $image = $this->arrData['getImageObject']($this -> image, [null, null, 2] ) ): ?>
+        <div class="rsce_greece__image">
+          <?php $image->picture['alt'] = $this->image_alt ?>
+          <?php $image->picture['title'] = $this->image_title ?>
+          <?php $this->insert('image', (array) $image); ?>
+        </div>
+      <?php endif; ?>
+    <?php endif; ?>
+    <?php if ( $this->text ): ?>
+      <div class="rsce_greece__text">
+        <?= $this->text ?>
+      </div>
+    <?php endif; ?>
+  </div>
+</div>
