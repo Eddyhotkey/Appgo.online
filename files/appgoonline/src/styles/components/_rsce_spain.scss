@@ -1,0 +1,89 @@
+.rsce_spain {
+	@include container_bottom_margin;
+	&__container {
+		@include container_inner_spacing;
+		@include shadow_sm;
+		padding-bottom: 0;
+		margin-bottom: $spacing_32;
+		background-color: $berlin;
+		border-radius: $border_radius_large;
+		@include media-breakpoint-up( lg ) {
+			padding-bottom: 0;
+		}
+	}
+
+	&__text {
+		display: none;
+		padding: rem-calc( 24px ) rem-calc( 16px );
+		border-radius: $border_radius_large;
+		font-size: rem-calc( 12px );
+		background: $berlin;
+
+		@include media-breakpoint-down( lg ) {
+			background-color: $amsterdam;
+		}
+		@include media-breakpoint-up( lg ) {
+			@include shadow_sm;
+			position: absolute;
+			bottom: 66%;
+			left: 50%;
+			margin: 0;
+
+		}
+
+		&.active {
+			display: block;
+		}
+	}
+
+	&__list {
+		@extend .row;
+	}
+
+	&__item {
+		@extend .col-24;
+		@extend .col-md-12;
+		@extend .col-lg-8;
+		position: relative;
+	}
+
+	&__title {
+		position: relative;
+		margin-bottom: $spacing_16;
+		padding: $spacing_10 0 $spacing_10 rem-calc( 32px );
+		border-radius: $border_radius_small;
+		background-color: $wien;
+		cursor: pointer;
+		@include media-breakpoint-up( lg ) {
+			margin-bottom: $spacing_32;
+		}
+		&::before {
+			position: absolute;
+			content: '';
+			top: 50%;
+			left: rem-calc( 10px );
+			width: rem-calc( 12px );
+			height: rem-calc( 12px );
+			margin-top: rem-calc( -6px );
+			background-color: $amsterdam;
+			border-radius: 50%;
+		}
+	}
+
+
+
+	&__link {
+		display: block;
+		margin: 0 $spacing_12;
+		@include media-breakpoint-down( lg ) {
+			@include mobile__button;
+		}
+		@include media-breakpoint-up( lg ) {
+			@include main_button;
+			width: fit-content;
+			margin: 0 auto;
+		}
+	}
+
+
+}
