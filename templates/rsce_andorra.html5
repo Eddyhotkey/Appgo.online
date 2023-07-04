@@ -1,0 +1,40 @@
+<div class="rsce_andorra <?= $this->class ?>" <?= $this->cssID ?> style="background-color: #<?= $this->background
+?>;" >
+  <?php if ( $watermark = $this->arrData['getImageObject'] ( $this->watermark ) ): ?>
+    <img
+      src="<?= $watermark->src ?>"
+      class="rsce_andorra__watermark"
+      alt="<?= $watermark->alt ?: $item->icon_alt ?>"
+      title="<?= $watermark->alt ?: $item->icon_title ?>"
+    >
+  <?php endif; ?>
+
+  <?php if( $this->headline ): ?>
+    <<?php echo $this->hl ?> itemprop="title" class="rsce_andorra__title">
+      <?php echo $this->headline ?>
+    </<?php echo $this->hl ?>>
+  <?php endif; ?>
+
+  <div class="rsce_andorra__container">
+    <div class="rsce__andorra__row row">
+      <?php foreach ( $this->list as $item ): ?>
+        <div class="rsce_andorra__col">
+          <?php if ( $icon = $this->arrData['getImageObject'] ( $item->icon ) ): ?>
+            <img
+              src="<?= $icon->src ?>"
+              class="rsce_france__icon"
+              alt="<?= $icon->alt ?: $item->icon_alt ?>"
+              title="<?= $icon->alt ?: $item->icon_title ?>"
+            >
+          <?php endif; ?>
+          <?php if ( $item->textarea ): ?>
+            <p class="rsce_france__text">
+              <?= $item->textarea ?>
+            </p>
+          <?php endif; ?>
+        </div>
+      <?php endforeach; ?>
+    </div>
+  </div>
+
+</div>
