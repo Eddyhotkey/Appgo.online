@@ -1,0 +1,37 @@
+.rsce_andorra {
+	@include container_inner_spacing;
+	@include container_bottom_margin;
+	position: relative;
+	color: $berlin;
+	border-radius: $border_radius_large;
+
+	&__watermark {
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		width: 15%;
+
+	}
+
+	&__title {
+		margin-bottom: $spacing_24;
+		font-size: rem-calc( 28px );
+		font-weight: 700;
+		z-index: 1;
+		@include media-breakpoint-up( lg ) {
+			font-size: rem-calc( 48px );
+			margin-bottom: $spacing_48;
+		}
+	}
+	&__container {
+		position: relative;
+		z-index: 1;
+	}
+
+	&__col {
+		@extend .col-24;
+		@include media-breakpoint-up( lg ) {
+			@extend .col-lg-8;
+		}
+	}
+}

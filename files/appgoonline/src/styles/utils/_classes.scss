@@ -11,3 +11,31 @@
 		font-size: rem-calc( 48px );
 	}
 }
+
+
+/************
+** ce_text **
+************/
+
+.title_with_teaser {
+	margin-bottom: $spacing_24;
+	@include media-breakpoint-down( lg ) {
+		@include container_inner_left_right_spacing;
+	}
+	@include media-breakpoint-up( lg ) {
+		max-width: 70%;
+		margin-bottom: $spacing_48;
+	}
+	h1,h2,h3,h4,h5,h6 {
+		margin-bottom: $spacing_16;
+		font-size: rem-calc( 28px );
+		font-weight: 700;
+		@include media-breakpoint-up( lg ) {
+			font-size: rem-calc( 48px );
+		}
+	}
+	p {
+		margin-bottom: 0;
+		font-weight: 700;
+	}
+}
