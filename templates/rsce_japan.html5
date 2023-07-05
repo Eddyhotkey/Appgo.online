@@ -1,0 +1,34 @@
+<div class="rsce_japan <?= $this->class ?>" <?= $this->cssID ?> >
+  <div class="rsce_japan__container" style="background-color: #<?= $this->background
+  ?>;">
+    <div class="rsce_japan__list">
+      <?php foreach ( $this->list as $item ): ?>
+        <div class="rsce_japan__item" style="border-color: #<?= $this->border
+        ?>;">
+          <?php if( $item->title ): ?>
+            <div class="rsce_japan__item_title">
+              <?php if ( $item->text ): ?>
+                <p class="rsce_japan__item_teaser">
+                  <?= $item->text ?>
+                </p>
+              <?php endif; ?>
+              <<?= $item -> title['unit'] ?>>
+                <?= $item -> title['value'] ?>
+              </<?= $item -> title['unit'] ?>>
+              <span class="rsce_japan__item_button">
+                <span></span>
+                <span></span>
+              </span>
+            </div>
+          <?php endif; ?>
+          <?php if ( $item -> textarea ): ?>
+            <div class="rsce_japan__item_text">
+              <?= $item->textarea ?>
+            </div>
+          <?php endif; ?>
+        </div>
+      <?php endforeach; ?>
+    </div>
+  </div>
+
+</div>
