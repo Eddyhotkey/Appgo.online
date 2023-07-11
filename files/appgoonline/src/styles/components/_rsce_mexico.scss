@@ -1,0 +1,153 @@
+.rsce_mexico {
+	@include container_bottom_margin;
+	&__container {
+		@include media-breakpoint-up( lg ) {
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+
+			&.text_first {
+				flex-direction: row-reverse;
+			}
+		}
+	}
+	&__slider {
+		position: relative;
+		@include media-breakpoint-up( lg ) {
+			width: calc( 50% - 16px );
+			height: 100%;
+		}
+		&::before {
+			position: absolute;
+			content: "";
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: rem-calc( 26px );
+			background-image: url("../images/svg/navbar.svg");
+			background-repeat: no-repeat;
+			z-index: 10;
+		}
+		.mySwiper2 {
+			position: relative;
+			@include shadow_sm;
+			margin-bottom: $spacing_16;
+			background-color: $berlin;
+			border-radius: $border_radius_large;
+			border: $spacing_16 solid $berlin;
+
+			@include media-breakpoint-up( lg ) {
+				border-width: $spacing_16;
+			}
+		}
+		.mySwiper {
+			width: 40%;
+			.swiper-slide {
+				@include shadow_sm;
+				position: relative;
+				border: rem-calc( 2px ) solid $berlin;
+				border-radius: $border_radius_small;
+				&::before {
+					position: absolute;
+					content: "";
+					top: 0;
+					bottom: 0;
+					width: 100%;
+					height: 100%;
+					background-color: rgba( 255, 204, 0, .5 );
+					border-radius: $border_radius_small;
+				}
+				img {
+					border-radius: $border_radius_small;
+				}
+				cursor: pointer;
+			}
+
+			.swiper-slide-thumb-active {
+				&::before {
+					content: none;
+					border-color: $amsterdam;
+				}
+			}
+		}
+
+		.swiper-button-next, .swiper-button-prev {
+			width: rem-calc( 36px );
+			height: rem-calc( 36px );
+		}
+		.swiper-button-next:after, .swiper-button-prev:after {
+			content: "";
+			width: rem-calc( 36px );
+			height: rem-calc( 36px );
+			border: rem-calc( 2px ) solid $berlin;
+			border-radius: 50%;
+			background-color: $paris;
+		}
+
+		.swiper-button-next {
+			&::before {
+				position: absolute;
+				content: " ";
+				top: 50%;
+				left: 50%;
+				margin-left: rem-calc( -7px );
+				margin-top: rem-calc( -5px );
+				width: rem-calc( 10px );
+				height: rem-calc( 10px );
+				border-top: rem-calc( 2px ) solid $berlin;
+				border-right: rem-calc( 2px ) solid $berlin;
+				transform: rotate( 45deg );
+			}
+		}
+		.swiper-button-prev {
+			&::before {
+				position: absolute;
+				content: " ";
+				top: 50%;
+				left: 50%;
+				margin-left: rem-calc( -4px );
+				margin-top: rem-calc( -5px );
+				width: rem-calc( 10px );
+				height: rem-calc( 10px );
+				border-top: rem-calc( 2px ) solid $berlin;
+				border-right: rem-calc( 2px ) solid $berlin;
+				transform: rotate( -135deg );
+			}
+		}
+	}
+
+	&__text {
+		h1,h2,h3,h4,h5,h6 {
+			font-size: rem-calc( 20px );
+			font-weight: 700;
+			@include media-breakpoint-up( lg ) {
+				font-size: rem-calc( 28px );
+			}
+		}
+		@include media-breakpoint-down( lg ) {
+			@include container_inner_spacing;
+		}
+		@include media-breakpoint-up( lg ) {
+			width: calc( 50% - 16px );
+			height: 100%;
+		}
+	}
+
+	&__image {
+		width: 100%;
+	}
+
+	&__link {
+		@include media-breakpoint-down( lg ) {
+			@include mobile__button;
+			display: block;
+			margin: $spacing_24 $spacing_16 0;
+		}
+		@include media-breakpoint-up( lg ) {
+			@include main_button;
+			width: fit-content;
+			margin: $spacing_24 auto 0;
+		}
+	}
+
+}

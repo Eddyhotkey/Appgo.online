@@ -1,0 +1,52 @@
+.rsce_malta {
+	@include container_bottom_margin;
+
+	&__title {
+		@extend .main_title;
+	}
+
+	&__swiper {
+		@include container_inner_spacing;
+		padding-bottom: rem-calc( 56px ) !important;
+		background-color: $paris;
+		border-radius: $border_radius_large;
+
+		&_wrapper {
+			margin-bottom: $spacing-20;
+		}
+
+		.swiper-pagination {
+			bottom: rem-calc( 24px );
+		}
+
+		.swiper-pagination-bullet {
+			background-color: $berlin;
+
+		}
+	}
+
+	&__item {
+		padding: $spacing_24;
+		background-color: $berlin;
+		border-radius: $border_radius_large;
+
+		&_top {
+			display: flex;
+			margin-bottom: $spacing_24;
+			img {
+				width: rem-calc( 64px );
+				height: rem-calc( 64px );
+				margin-right: $spacing_20;
+			}
+		}
+	}
+
+	&__name {
+		margin-bottom: rem-calc( 5px );
+		font-weight: 700;
+		line-height: 1;
+	}
+	&__firm {
+		line-height: 1;
+	}
+}
