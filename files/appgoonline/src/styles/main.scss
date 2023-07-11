@@ -13,6 +13,7 @@ $grid-columns: 24;
 				"utils/keyframes",
 				"utils/mixins",
 				"utils/variables",
+				"base/colors",
 				"utils/classes";
 
 /*** base ***/
@@ -28,15 +29,22 @@ $grid-columns: 24;
 				"components/rsce_spain",
 				"components/rsce_greece",
 				"components/rsce_andorra",
-				"components/rsce_japan";
+				"components/rsce_japan",
+				"components/rsce_mexico",
+				"components/rsce_malta",
+				"components/rsce_monaco",
+				"components/rsce_argentina";
 
 /*** layouts ***/
 @import "layout/header",
 				"layout/footer",
 				"layout/mod_mobile_menu",
 				"layout/rsce_header",
-				"layout/rsce_footer";
+				"layout/rsce_footer",
+				"layout/main_form";
+
 /*** themes ***/
+
 /*** pages ***/
 @import "pages/homepage";
 
