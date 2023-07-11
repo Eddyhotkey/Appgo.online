@@ -1,0 +1,31 @@
+<section class="rsce_monaco <?= $this->class ?>" itemscope itemtype="http://schema.org/Article">
+  <?php if( $this->headline ): ?>
+    <<?php echo $this->hl ?> itemprop="title" class="rsce_monaco__title">
+      <?php echo $this->headline ?>
+    </<?php echo $this->hl ?>>
+  <?php endif; ?>
+  <div class="rsce_monaco__container">
+    <div class="rsce_monaco__list">
+      <?php foreach ( $this->list as $item ): ?>
+        <div class="rsce_monaco__item" style="border-color: #<?= $this->border ?>;">
+          <?php if( $item->title ): ?>
+            <div class="rsce_monaco__item_title">
+              <<?= $item -> title['unit'] ?>>
+                <?= $item -> title['value'] ?>
+              </<?= $item -> title['unit'] ?>>
+              <span class="rsce_monaco__item_button">
+                <span></span>
+                <span></span>
+              </span>
+            </div>
+          <?php endif; ?>
+          <?php if ( $item -> textarea ): ?>
+            <div class="rsce_monaco__item_text">
+              <?= $item->textarea ?>
+            </div>
+          <?php endif; ?>
+        </div>
+      <?php endforeach; ?>
+    </div>
+  </div>
+</section>
