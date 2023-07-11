@@ -39,3 +39,39 @@
 		font-weight: 700;
 	}
 }
+
+.header_text {
+	@include container_inner_left_right_spacing;
+	padding-top: rem-calc( 88px );
+	padding-bottom: rem-calc( 60px );
+	@include media-breakpoint-up( lg ) {
+		padding-top: rem-calc( 120px );
+		padding-bottom: rem-calc( 120px );
+	}
+	h1,h2,h3,h4,h5,h6 {
+		@include content_bottom_margin;
+		font-size: rem-calc( 32px );
+		font-weight: 700;
+		text-align: center;
+		color: $paris;
+		@include media-breakpoint-up( md ) {
+			font-size: rem-calc( 48px );
+		}
+		@include media-breakpoint-up( lg ) {
+			font-size: rem-calc( 56px );
+		}
+		@include media-breakpoint-up( xxl ) {
+			font-size: rem-calc( 80px );
+		}
+	}
+	p {
+		font-size: rem-calc( 24px );
+		font-weight: 400;
+		text-align: center;
+		color: $baku;
+
+		&:last-child {
+		margin-bottom: 0;
+	}
+	}
+}
