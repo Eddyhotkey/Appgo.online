@@ -1,0 +1,53 @@
+<div class="rsce_mexico <?= $this->class ?>" <?= $this->cssID ?>>
+  <div class="rsce_mexico__container <?= ($this->position_chb) ? 'text_first': '' ?>">
+    <div class="rsce_mexico__slider">
+      <div  class="swiper mySwiper2">
+        <div class="swiper-wrapper">
+          <?php foreach ( $this->list as  $item ): ?>
+            <div class="swiper-slide">
+              <?php if ( $image = $this->arrData['getImageObject']( $item -> image, [null, null, 3] ) ): ?>
+                <div class="rsce_mexico__image">
+                  <?php $image->picture['alt'] = $item->image_alt ?>
+                  <?php $image->picture['title'] = $item->image_title ?>
+                  <?php $this->insert('image', (array) $image); ?>
+                </div>
+              <?php endif; ?>
+            </div>
+          <?php endforeach; ?>
+        </div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+      </div>
+      <div class="swiper mySwiper">
+        <div class="swiper-wrapper">
+          <?php foreach ( $this->list as  $item ): ?>
+            <div class="swiper-slide">
+              <?php if ( $image = $this->arrData['getImageObject']( $item -> image, [null, null, 4] ) ): ?>
+                <div class="rsce_mexico__thumb_image">
+                  <?php $image->picture['alt'] = $item->image_alt ?>
+                  <?php $image->picture['title'] = $item->image_title ?>
+                  <?php $this->insert('image', (array) $image); ?>
+                </div>
+              <?php endif; ?>
+            </div>
+          <?php endforeach; ?>
+        </div>
+      </div>
+
+    </div>
+    <?php if ( $this->text ): ?>
+      <div class="rsce_mexico__text">
+        <?= $this->text ?>
+      </div>
+    <?php endif; ?>
+  </div>
+  <?php if ( $this->link ): ?>
+    <a href="<?= $this->link ?>"
+       class="rsce_mexico__link"
+       title="<?= $this->link_title ?>"
+       aria-label="<?= $this->link_aria_label ?>"
+    >
+      <?= $this->link_text ?>
+    </a>
+  <?php endif; ?>
+</div>
