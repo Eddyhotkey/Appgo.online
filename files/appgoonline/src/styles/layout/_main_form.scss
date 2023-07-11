@@ -1,0 +1,80 @@
+.main_form {
+	@include container_bottom_margin;
+	@include container_inner_spacing;
+	border-radius: $border_radius_large;
+	background-color: rgba(255, 204, 0, 0.5);
+	color: $paris;
+
+
+	.widget-text {
+		display: flex;
+		flex-direction: column;
+		margin-bottom: $spacing_24;
+		@include media-breakpoint-up( lg ) {
+			width: calc( 50% - 10px );
+		}
+		input {
+			padding: $spacing_8;
+			border: none;
+			border-radius: $border_radius_large;
+		}
+	};
+
+	fieldset {
+		@include media-breakpoint-up( lg ) {
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+
+		}
+		.widget-text {
+			@include media-breakpoint-up( lg ) {
+				flex: 1;
+				margin: 0 10px $spacing_20;
+				&:first-child {
+					margin-left: 0;
+				}
+				&:last-child {
+					margin-right: 0;
+				};
+			}
+		}
+	}
+
+	.widget-textarea {
+		display: flex;
+		flex-direction: column;
+		textarea {
+			width: 100%;
+			padding: $spacing_8;
+			border: none;
+			border-radius: $border_radius_large;
+		}
+	}
+
+	span.mandatory {
+		display: inline-block;
+		margin-left: rem-calc( 3px );
+		color: indianred;
+	}
+
+	.widget-submit {
+		button {
+			@include main_button;
+			border: none;
+			background-color: $berlin;
+		}
+	}
+
+	.widget-explanation {
+		margin-bottom: rem-calc( 32px );
+		a {
+			color: $paris;
+			transition-duration: .3s;
+			&:hover {
+				color: $berlin;
+				transition-duration: .3s;
+			}
+		}
+	}
+}
