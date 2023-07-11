@@ -1,5 +1,5 @@
 <div class="rsce_andorra <?= $this->class ?>" <?= $this->cssID ?> style="background-color: #<?= $this->background
-?>;" >
+?>;" itemscope itemtype="http://schema.org/Article">
   <?php if ( $watermark = $this->arrData['getImageObject'] ( $this->watermark ) ): ?>
     <img
       src="<?= $watermark->src ?>"
