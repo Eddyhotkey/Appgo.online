@@ -1,0 +1,47 @@
+<div class="rsce_malta <?= $this->class ?>" <?= $this->cssID ?>  itemscope itemtype="http://schema.org/Article">
+  <?php if( $this->headline ): ?>
+    <<?php echo $this->hl ?> itemprop="title" class="rsce_malta__title" >
+      <?php echo $this->headline ?>
+    </<?php echo $this->hl ?>>
+  <?php endif; ?>
+
+  <div class="swiper rsce_malta__swiper">
+    <div class="swiper-wrapper rsce_malta__swiper_wrapper">
+      <?php foreach ( $this->list as $item ): ?>
+        <div class="swiper-slide">
+          <div class="rsce_malta__item">
+            <div class="rsce_malta__item_top">
+              <?php if ( $image = $this->arrData['getImageObject']($item -> image )): ?>
+                <img
+                  class="rsce_malta__image"
+                  src="<?php echo $image->src ?>"
+                  alt="<?php echo $image->alt ?: $this->image_alt ?>"
+                  title="<?= $item->image_title ?>"
+                  <?php echo $image->imgSize ?>
+                >
+              <?php endif; ?>
+              <?php if ( $item->name ): ?>
+                <div class="rsce_malta__text">
+                  <p class="rsce_malta__name">
+                    <?= $item->name ?>
+                  </p>
+                  <?php if ( $item->firm ): ?>
+                    <p class="rsce_malta__firm">
+                      <?= $item->firm ?>
+                    </p>
+                  <?php endif; ?>
+                </div>
+              <?php endif; ?>
+            </div>
+            <?php if ( $item->text ): ?>
+              <p class="rsce_malta__description">
+                <?= $item->text ?>
+              </p>
+            <?php endif; ?>
+          </div>
+        </div>
+      <?php endforeach; ?>
+    </div>
+    <div class="swiper-pagination"></div>
+  </div>
+</div>
